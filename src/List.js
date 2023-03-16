@@ -9,10 +9,18 @@ const List = (props) => {
         <article key={id} className="grocery-item">
           <p className="title">{title}</p>
           <div className="btn-container">
-            <button type="button" className="edit-btn">
+            <button
+              type="button"
+              className="edit-btn"
+              onClick={() => props.editItem(id)}
+            >
               <FaEdit />
             </button>
-            <button type="button" className="delete-btn" onClick={() => props.removeItem(id)}>
+            <button
+              type="button"
+              className="delete-btn"
+              onClick={() => props.removeItem(id)}
+            >
               <FaTrash />
             </button>
           </div>
