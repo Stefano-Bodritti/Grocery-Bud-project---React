@@ -6,7 +6,7 @@ const Alert = (props) => {
       props.removeAlert();
     }, 3000);
     return () => clearTimeout(timeout);
-  }, []);
+  }, [props.list]);
 
   return <p className={`alert alert-${props.type}`}>{props.msg}</p>
 }
